@@ -1,7 +1,7 @@
 import {useState} from "react"
 import { Link } from "react-scroll"
 import Button from "../layouts/Buttons"
-import { BiRestaurant } from "react-icons/bi"
+import { BiChevronDown, BiRestaurant } from "react-icons/bi"
 import {AiOutlineClose} from "react-icons/ai"
 import {AiOutlineMenuUnfold } from "react-icons/ai"
 const Navbar = () => {
@@ -32,9 +32,10 @@ const Navbar = () => {
                             <div className="relative group">
                                 <div className="flex items-center gap-1">
                                     <Link to="dishes" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Dishes</Link>
+                                    <BiChevronDown className="cursor-pointer" size={25} />
                                 </div>
 
-                                <ul className="absolute hidden space-y-2 group-hover:block bg-white border-gray-300 rounded-lg p-5">
+                                <ul className="absolute hidden space-y-2 group-hover:block bg-white border-2 border-gray-300 rounded-lg p-5">
 
                                     <li> <Link to="dishes" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Spicy</Link> </li>
                                     <li> <Link to="dishes" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Tasty</Link> </li>
@@ -49,15 +50,19 @@ const Navbar = () => {
 
                             <Button title="Login" />
                         </nav>
-                        <div>
+                        <div className="md:hidden flex items-center">
                             {menu ?
                                 (< AiOutlineClose size={25} onClick={handleChange} />) : (<AiOutlineMenuUnfold size={25} onClick={handleChange} />)
                             }
                         </div>
                     </div>
                     <div className={`${menu ? "translate-x-0" : "-translate-x-full"} lg-hidden flex flex-col absolute bg-black text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300 `}>
-                    <Link to="home" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Home</Link>
-                    <Link to="dishes" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Dishes</Link>
+                        <Link to="home" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Home</Link>
+                        <Link to="dishes" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Dishes</Link>
+                        <Link to="about" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >About</Link>
+                        <Link to="menu" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Menu</Link>
+                        <Link to="review" spy={true} smooth={true} duration={500} className="hover:text-orange-400 transition-all cursor-pointer" >Reviews</Link>
+                        <Button title="Login" />
                     </div>
                 </div>
             </div>
