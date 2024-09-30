@@ -4,7 +4,8 @@ import Navbar from "./components/Navbar"
 import Dishes from "./components/Dishes"
 import About from "./components/About"
 import Menu from "./components/Menu"
-import Review from "./components/Review"
+import Footer from "./components/Footer"
+// import Review from "./components/Review"
 function App() {
   return (
     <>
@@ -22,8 +23,8 @@ function App() {
         <div id="menu">
           <Menu />
         </div>
-        <div id="review">
-          <Review />
+        <div id="footer">
+          <Footer />
         </div>
       </main>
     </>
