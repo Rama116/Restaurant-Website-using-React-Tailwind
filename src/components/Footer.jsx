@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
             <div className="w-full md:w-1/4">
                 <h1 className="font-semibold text-xl pb-4">FoodieWeb</h1>
-                <p className="text-sm">qoiywbfrioqy qcyqorcy;o qociy rqiry coiyrqo rcioqrt qtrciuqtr ciuqtr</p>
+                <p className="text-sm">Our team is a family, and we are dedicated to making your dining experience memorable. Whether you’re here for a casual meal, a special celebration, or a cozy date night, our staff is here to provide you with the best service possible. We strive to create a warm, inviting atmosphere where everyone feels at home.</p>
             </div>
             <div>
                 <h1 className="font-medium text-xl pb-4 pt-5 md:pt-0">Links</h1>

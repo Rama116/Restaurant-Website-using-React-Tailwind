@@ -13,7 +13,7 @@ const Home = () => {
                         Amenities – Highlight the kind of amenities the hotel offers. If there is a pool, spa, gym, restaurant, or bar you are going to want to mention that. As well as free breakfast.
                     </p>
                     <div className="lg:pl-44">
-                        <Button title="Order Now" />
+                        <Button title="Order Now"/>
                     </div>
                 </div>
             </div>
