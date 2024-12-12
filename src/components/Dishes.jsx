@@ -10,7 +10,7 @@ import bir from "../assets/img/biriyani.avif"
 const Dishesh = () => {
   return (
     <>
-        <div className="min-h-screen flex flex-col justify-center items-center lg:px-32 px-8">
+        <div className="min-h-screen flex flex-col justify-center items-center lg:px-32 px-8 mb-3 md:mb-4">
             <h1 className="text-4xl font-semibold text-center pt-24 pb-18">Our Dishes</h1>
             <div className="flex flex-wrap gap-8 justify-center">
                 <DishesCard img={img1} title="Tasty Dish" price="$7.79" />
