@@ -1,13 +1,41 @@
+import {Link} from "react-router-dom"
+import { useState } from "react"
+import axios from 'axios'
+import { useNavigate } from "react-router-dom"
 
-import { Link } from "react-router-dom";
+
 const Login = () => {
+
+  const [email,setEmail] = useState()
+  const [password,setPassword] = useState()
+  const navigate = useNavigate()
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:3001/login',{email,password})
+        .then(result => {console.log(result)
+          if(result.data === "Success")
+          {
+            navigate('/')
+          }
+        })
+        .catch(err => console.log(err))
+      }
+
+
+
   return (
     <>
         <div className="h-screen w-screen bg-slate-50 flex flex-row justify-center items-center">
-            <form className="h-[26rem] w-[24rem] md:w-[26rem] border-2 border-orange-700 rounded-2xl bg-white box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); flex flex-col gap-6 justify-center items-center">
+            <form onSubmit={handleSubmit} 
+             className="h-[26rem] w-[24rem] md:w-[26rem] border-2 border-orange-700 rounded-2xl bg-white box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); flex flex-col gap-6 justify-center items-center">
                     <h1 className="text-2xl  text-black font-bold hover:text-orange-400">LOGIN</h1>
-                <input className="px-9 py-4 border-b-2 border-orange-400 outline-none bg-orange-50" type="email" name="email" id="em" placeholder="E-Mail" required/>
-                <input className="px-9 py-4 border-b-2 border-orange-400 outline-none bg-orange-50" type="password" name="pass" id="ps" placeholder="Password" required/>
+                <input className="px-9 py-4 border-b-2 border-orange-400 outline-none bg-orange-50" type="email" name="email" id="em" placeholder="E-Mail" required
+                onChange={(e) => setEmail(e.target.value)}
+                />
+                <input className="px-9 py-4 border-b-2 border-orange-400 outline-none bg-orange-50" type="password" name="pass" id="ps" placeholder="Password" required
+                onChange={(e) => setPassword(e.target.value)}
+                />
                 <div>
                 <p className="font-semibold text-orange-400">
           New? <Link to="/SignUp" className="text-black">Register</Link>
