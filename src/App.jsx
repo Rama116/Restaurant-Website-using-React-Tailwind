@@ -8,6 +8,7 @@ import Menu from "./components/Menu";
 import Products from "./components/Products";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import Cart from "./components/Cart";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/products" element={<Products />} />
+                <Route path="/Cart" element={<Cart />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/SignUp" element={<SignUp />} />
             </Routes>

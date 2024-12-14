@@ -35,6 +35,9 @@ const Navbar = () => {
                     <Link to="/products" className="hover:text-orange-400 cursor-pointer">
                         Products
                     </Link>
+                    <Link to="/Cart" className="hover:text-orange-400 cursor-pointer">
+                        Cart
+                    </Link>
                     <Link to="/Login">
                     <Button title="Login" />
                     </Link>
@@ -66,6 +69,9 @@ const Navbar = () => {
                     </Link>
                     <Link to="/products" onClick={handleChange} className="hover:text-orange-400 cursor-pointer">
                         Products
+                    </Link>
+                    <Link to="/Cart" onClick={handleChange} className="hover:text-orange-400 cursor-pointer">
+                        Cart
                     </Link>
                     <Button title="Login" />
                 </div>
